@@ -10,6 +10,6 @@ export async function browserLaunchOptions() {
     await access(macBravePath)
     return { headless: true, executablePath: macBravePath }
   } catch {
-    return { headless: true }
+    return { headless: true, channel: 'chromium' }
   }
 }
